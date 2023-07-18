@@ -35,6 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.blue,
               ),
             ),
+            //incremented value
             Text(
               _counter.toString(),
               style: TextStyle(
@@ -54,6 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
             _counter = _counter + 1;
           });
         },
+        backgroundColor: Colors.green[900],
         child: Icon(
           Icons.add,
         ),
