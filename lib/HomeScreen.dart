@@ -28,6 +28,14 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
+              'Incremented value : ',
+              style: TextStyle(
+                fontSize: 19,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue,
+              ),
+            ),
+            Text(
               _counter.toString(),
               style: TextStyle(
                 fontSize: 50,
