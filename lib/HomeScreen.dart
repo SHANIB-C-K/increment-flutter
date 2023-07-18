@@ -13,6 +13,15 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Increment',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
+      ),
       backgroundColor: Colors.black,
       body: Center(
         child: Column(
@@ -21,9 +30,10 @@ class _HomeScreenState extends State<HomeScreen> {
             Text(
               _counter.toString(),
               style: TextStyle(
-                  fontSize: 50,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white38),
+                fontSize: 50,
+                fontWeight: FontWeight.bold,
+                color: Colors.white54,
+              ),
             ),
           ],
         ),
@@ -32,7 +42,9 @@ class _HomeScreenState extends State<HomeScreen> {
         onPressed: () {
           //Incrementing Data
           print(_counter);
-          _counter = _counter + 1;
+          setState(() {
+            _counter = _counter + 1;
+          });
         },
         child: Icon(
           Icons.add,
